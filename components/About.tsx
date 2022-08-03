@@ -4,13 +4,13 @@ import { BsArrowDown } from 'react-icons/bs'
 
 export default function About() {
 
-  const ref = useRef(null)
-  const [scrollY, setScrollY] = useState(0)
+  const ref = useRef<any>(null)
+  const [scrollY, setScrollY] = useState(700)
   
     useEffect(() => {
         window.addEventListener('scroll', () => {
+          if (ref.current !== null)
             setScrollY(ref.current.getBoundingClientRect().top)
-            console.log(ref.current.getBoundingClientRect().top)
         })
     }
     , [])
@@ -26,7 +26,7 @@ export default function About() {
           <div style={{transform: `translateX(${scrollY < 400 && scrollY > -400 ? 30 : 0}%)`}} className='h-72 md:h-96 w-full aspect-video bg-neutral-100 rounded-xl p-8 shadow-2xl transition-transform duration-500'>
             <p className='text-xs leading-relaxed md:text-xl'><span className='text-sm md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 py-1 px-6 rounded-xl text-neutral-50 '>Hi!</span> I am a 17 year old boy from Sweden, who loves programming.</p>
             <p className='overflow-hidden text-xl tracking-widest leading-10 h-10 text-neutral-400'>{[...Array(80)].map((e, i) => ("-"))}</p>
-            <p className='text-xs leading-relaxed md:text-xl'>I have been coding for nearly 5 years, and I have a passion for creating beautiful and functional websites.</p>
+            <p className='text-xs leading-relaxed md:text-xl'>Coding has been a passion of mine for nearly 5 years, and I enjoy creating beautiful and functional websites.</p>
             <p className='overflow-hidden text-xl tracking-widest leading-10 h-10 text-neutral-400'>{[...Array(80)].map((e, i) => ("-"))}</p>
             <p className='text-xs leading-relaxed md:text-xl'>When I'm not coding, I ride mountain bikes or go skiing.</p>
           </div>
