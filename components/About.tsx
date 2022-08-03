@@ -16,7 +16,7 @@ export default function About() {
     , [])
 
   return (
-    <div ref={ref} className='flex flex-col items-center'>
+    <div id='about' ref={ref} className='flex flex-col items-center'>
         {/* Scroll down arrow */}
         <BsArrowDown style={{ opacity: scrollY < 600 ? 0 : 1}} className='animate-bounce h-16 w-12 -z-10 transition-opacity' />
         <div style={{transform: `scale(${scrollY < 600 && scrollY > -400 ? 100 : 50}%)`, minWidth: "18rem"}} className='mt-8 w-3/5 max-w-fit transition-transform duration-500'>

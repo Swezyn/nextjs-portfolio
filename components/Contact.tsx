@@ -64,7 +64,7 @@ export default function Contact() {
   }
 
   return (
-    <div ref={ref} className='flex lg:flex-row flex-col-reverse justify-between w-full p-32'>
+    <div id='contact' ref={ref} className='flex lg:flex-row flex-col-reverse justify-between w-full p-32'>
       {sendStatus === 'success' ?
       <div className='lg:w-1/2 w-full h-96 flex flex-col items-center'>
         <div className='bg-neutral-100 border-l-8 border-green-600 rounded-xl h-24 w-96 mt-16 flex items-center py-2 px-4'>
@@ -80,7 +80,7 @@ export default function Contact() {
       <form style={{opacity: sendStatus === "success" ? 0 : 1}} onSubmit={SendEmail} className='lg:w-1/2 w-full transition-all duration-500'>
         <div className='flex flex-col items-center'>
           {/* Name */}
-          <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col w-96 transition duration-500'>
+          <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0, pointerEvents: scrollY < 500 ? "all" : "none"}} className='flex flex-col w-96 transition duration-500'>
             <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Name</label>
             <div className={`bg-neutral-100 rounded-xl w-full shadow-xl overflow-hidden ${nameInput.error && "border-red-600 border-2"}`}>
               <input className='w-full p-3' name='name' placeholder='Your name here' value={nameInput["value"]} onChange={(e) => setNameInput(nameInput => ({...nameInput, value: e.target.value}))}/>

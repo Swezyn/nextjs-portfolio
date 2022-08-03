@@ -14,11 +14,11 @@ export default function Skills() {
     , [])
   
   return (
-    <div ref={ref}>
+    <div id='skills' ref={ref}>
         <div className='h-full w-full px-8 py-32 lg:px-16 lg:pt-64 lg:pb-48 2xl:px-64 lg:flex justify-between'>
           <div className='lg:sticky top-1/4 lg:w-2/5 lg:mb-0 mb-16 self-start overflow-hidden'>
             <h1 style={{transform: `translateY(${scrollY < 400 ? 0 : -120}%)`, transitionDelay: `${scrollY < 400 ? 100 : 0}ms`}} className='lg:text-7xl text-2xl font-bold text-neutral-900 leading-none transition-transform duration-500'>My most important skills</h1>
-            <p style={{transform: `translateY(${scrollY < 400 ? 0 : -380}%)`}} className='leading-normal lg:text-2xl lg:mt-8 mt-4 transition-transform duration-500'>These are my favorite tools and frameworks for <span className='font-semibold'>Web Development</span></p>
+            <p style={{transform: `translateY(${scrollY < 400 ? 0 : -500}%)`}} className='leading-normal lg:text-2xl lg:mt-8 mt-4 transition-transform duration-500'>These are my favorite tools and frameworks for <span className='font-semibold'>Web Development</span></p>
           </div>
           <div className='lg:w-1/2'>
             <Skill name="React JS" desc="As someone who has used React for the majority of my career, I would consider myself very knowledgeable in the area." procent="75" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" />

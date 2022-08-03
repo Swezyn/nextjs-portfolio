@@ -15,7 +15,7 @@ export default function Intro() {
     , [])
 
   return (
-    <div ref={ref} className='w-full bg-neutral-100 h-fit flex items-center flex-col pt-32'>
+    <div id='intro' ref={ref} className='w-full bg-neutral-100 h-fit flex items-center flex-col pt-32'>
         <h3 style={{transform: `translateY(${scrollY < -100 ? 50 : 0}%)`, opacity: -scrollY * 0.003 + 1}} className='font-bold uppercase text-base tracking-widest leading-loose md:text-2xl text-neutral-700 transition-transform duration-300 ease-linear'>Hi, My name is</h3>
         <h1 className='font-extrabold text-5xl leading-normal text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 md:text-7xl md:leading-normal'>Elias Akesson</h1>
         <div style={{transform: `scaleX(${scrollY < 0 ? 1.5 : 1}) translateY(${scrollY < -100 ? -110 : 0}%)`, borderTopWidth: `${scrollY < -100 ? 0 : 2}px`}} className='w-64 h-28 border-t-2 bg-neutral-100 border-purple-400 md:w-96 transition-all duration-150' />
