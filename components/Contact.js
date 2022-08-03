@@ -14,7 +14,16 @@ export default function Contact() {
     const [buttonText, setButtonText] = useState('Send')
     const [status, setStatus] = useState({})
 
+    const onFormUpdate = (detail, value) => {
+        setFormDetails({
+            ...formDetails,
+            [detail]: value
+        })
+    }
+
   return (
-    <div>Contact</div>
+    <div>
+      
+    </div>
   )
 }

@@ -12,7 +12,6 @@ export default function Home() {
         <About />
         <Skills />
         <Contact />
-        <div style={{height: "200vh"}}/>
     </div>
   )
 }
