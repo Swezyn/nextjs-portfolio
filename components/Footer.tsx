@@ -6,13 +6,11 @@ export default function Footer() {
     function scrollTo(element: string) {
         if (element === 'intro') {
             window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+                top: 0
             })
         } else {
             window.scrollTo({
-                top: document.getElementById(element).offsetTop,
-                behavior: 'smooth'
+                top: document.getElementById(element).offsetTop
             })
         }
     }
