@@ -30,7 +30,7 @@ export default function Footer() {
                 Coding has been a passion of mine for nearly 5 years, and I enjoy creating beautiful and functional websites. 
                 When I'm not coding, I ride mountain bikes or go skiing.</p>
         </div>
-        <div className='flex md:flex-row flex-col w-1/2 ml-4'>
+        <div className='flex md:flex-row flex-col items-center w-1/2 ml-4'>
             {/* Quick Links */}
             <div className='md:w-1/2 mb-4 md:ml-16'>
                 <h1 className='text-neutral-50 font-bold leading-loose md:text-base text-xs'>Quick Links</h1>

@@ -36,7 +36,7 @@ export default function About() {
           <p className='text-xs leading-relaxed md:text-xl'>When I'm not coding, I ride mountain bikes or go skiing.</p>
         </div>
       </div>
-      <div style={{transform: `scale(${scrollY < 600 && scrollY > -400 ? 100 : 50}%) translateY(-20%)`}} className='mt-32 w-4/5 max-w-screen-lg transition-transform duration-500 items-center md:hidden flex flex-col'>
+      <div style={{transform: `scale(${scrollY < 600 && scrollY > -400 ? 100 : 50}%) translateY(-30%)`}} className='mt-32 w-4/5 max-w-screen-lg transition-transform duration-500 items-center md:hidden flex flex-col'>
         <div style={{transform: `translateY(${scrollY < 400 && scrollY > -400 ? -70 : -20}%) scale(50%)`}} className='h-72 md:h-96 w-fit aspect-square bg-neutral-700 absolute rounded-xl overflow-hidden transition-transform duration-500'>
           <img src="/me.jpeg" className="w-full h-full object-cover"/>
         </div>
