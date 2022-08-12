@@ -86,36 +86,44 @@ export default function Contact() {
         <form style={{opacity: sendStatus === "success" ? 0 : 1}} onSubmit={SendEmail} className='lg:w-1/2 w-full transition-all duration-500'>
           <div className='flex flex-col items-center w-full'>
             {/* Name */}
-            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0, pointerEvents: scrollY < 500 ? "all" : "none"}} className='flex flex-col lg:w-96 w-3/4 transition duration-500'>
-              <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Name</label>
+            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0, pointerEvents: scrollY < 500 ? "all" : "none"}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 mt-2'>
+              <div className='flex w-full'>
+                <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Name</label>
+                <label className={`text-red-600 text-sm leading-none translate-y-3 pl-2 ${!nameInput.error && "text-opacity-0"}`}>{nameInput.error}</label>
+              </div>
               <div className={`bg-neutral-100 rounded-xl w-full shadow-xl overflow-hidden ${nameInput.error && "border-red-600 border-2"}`}>
                 <input className='w-full p-3' name='name' placeholder='Your name here' value={nameInput["value"]} onChange={(e) => setNameInput(nameInput => ({...nameInput, value: e.target.value}))}/>
               </div>
-              <label className={`text-red-600 px-6 text-sm leading-loose ${!nameInput.error && "text-opacity-0"}`}>{nameInput.error}</label>
             </div>
             {/* Email */}
-            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 delay-150'>
-              <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Email</label>
+            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 delay-150 mt-2'>
+              <div className='flex w-full'>
+                <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Email</label>
+                <label className={`text-red-600 text-sm leading-none translate-y-3 pl-2 ${!emailInput.error && "text-opacity-0"}`}>{emailInput.error}</label>
+              </div>
               <div className={`bg-neutral-100 rounded-xl w-full shadow-xl overflow-hidden ${emailInput.error && "border-red-600 border-2"}`}>
                 <input className='w-full p-3' name='email' placeholder='Your email here' value={emailInput["value"]} onChange={(e) => setEmailInput(emailInput => ({...emailInput, value: e.target.value}))}/>
               </div>
-              <label className={`text-red-600 px-6 text-sm leading-loose ${!emailInput.error && "text-opacity-0"}`}>{emailInput.error}</label>
             </div>
             {/* Subject */}
-            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 delay-300'>
-              <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Subject</label>
+            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -100}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 delay-300 mt-2'>
+              <div className='flex w-full'>
+                <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Subject</label>
+                <label className={`text-red-600 text-sm leading-none translate-y-3 pl-2 ${!subjectInput.error && "text-opacity-0"}`}>{subjectInput.error}</label>
+              </div>
               <div className={`bg-neutral-100 rounded-xl w-full shadow-xl overflow-hidden ${subjectInput.error && "border-red-600 border-2"}`}>
                 <input className='w-full p-3' name='subject' placeholder='The subject here' value={subjectInput["value"]} onChange={(e) => setSubjectInput(subjectInput => ({...subjectInput, value: e.target.value}))}/>
               </div>
-              <label className={`text-red-600 px-6 text-sm leading-loose ${!subjectInput.error && "text-opacity-0"}`}>{subjectInput.error}</label>
             </div>
             {/* Message */}
-            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -50}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 delay-500'>
-              <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Message</label>
+            <div style={{transform: `translateY(${scrollY < 500 ? 0 : -50}%)`, opacity: scrollY < 500 ? 1 : 0}} className='flex flex-col lg:w-96 w-3/4 transition duration-500 delay-500 mt-2'>
+              <div className='flex w-full'>
+                <label className='translate-y-2 bg-neutral-200 px-6 py-1 rounded-full w-fit ml-4 font-semibold'>Message</label>
+                <label className={`text-red-600 text-sm leading-none translate-y-3 pl-2 ${!messageInput.error && "text-opacity-0"}`}>{messageInput.error}</label>
+              </div>
               <div className={`bg-neutral-100 rounded-xl w-full shadow-xl overflow-hidden ${messageInput.error && "border-red-600 border-2"}`}>
                 <textarea className='p-3 w-full' rows={5} name='message' placeholder='The message here' value={messageInput["value"]} onChange={(e) => setMessageInput(messageInput => ({...messageInput, value: e.target.value}))}/>
               </div>
-              <label className={`text-red-600 px-6 text-sm leading-loose ${!messageInput.error && "text-opacity-0"}`}>{messageInput.error}</label>
             </div>
             <input className='bg-neutral-50 w-32 text-center cursor-pointer mt-16 px-8 py-3 rounded-full text-xs text-neutral-700 font-bold lg:text-base lg:py-4 lg:px-12 hover:shadow-xl hover:-translate-y-1 transition' type="submit" value="Send Message" />
           </div>
